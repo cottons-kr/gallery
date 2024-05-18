@@ -1,0 +1,116 @@
+.focus {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  min-height: 100dvh;
+  background-color: black;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+}
+
+.root {
+  position: absolute;
+  width: fit-content;
+  left: 50%;
+  display: flex;
+  align-items: flex-end;
+  transform: translateX(calc(-50% + 150px));
+  @media (max-width: 1500px) {
+    transform: translateX(-50%);
+  }
+  @media (max-width: 1100px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+.container {
+  width: fit-content;
+  height: calc(100dvh - 80px);
+  max-height: 1000px;
+  .mask {
+    width: fit-content;
+    overflow: hidden;
+  }
+  img {
+    width: auto;
+    height: calc(100dvh - 80px);
+    max-height: 1000px;
+    object-fit: contain;
+  }
+  @media (max-width: 1100px) {
+    height: calc(100dvh - 300px);
+    img {
+      height: calc(100dvh - 300px);
+    }
+  }
+}
+
+.info {
+  width: 300px;
+  margin-left: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  h2 {
+    font-size: 32px;
+    font-weight: 500;
+    color: #DDDDDD;
+  }
+  .table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 12px;
+    .meta {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  .infoItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      display: flex;
+      align-items: center;
+      .icon {
+        width: 23px;
+      }
+      h3 {
+        font-weight: 400;
+      }
+    }
+  }
+  .navigator {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    svg {
+      cursor: pointer;
+    }
+  }
+  @media (max-width: 1100px) {
+    width: 100%;
+    margin-left: 0;
+    gap: 20px;
+    h2 {
+      font-size: 24px;
+    }
+    .table {
+      font-size: 10px;
+      gap: 7px;
+    }
+  }
+}
