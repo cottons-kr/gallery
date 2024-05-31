@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <meta property='og:title' content='Gallery' />
       <meta property='og:description' content={`Taeyeong Kim's Gallery`} />
       <meta property='og:type' content='website' />
-      <meta property='og:url' content='https://tyeongkim.me/' />
+      <meta property='og:url' content='https://gallery.tyeongkim.me/' />
       <meta property='og:site_name' content='Gallery' />
     </Head>
     <RecoilRoot>
